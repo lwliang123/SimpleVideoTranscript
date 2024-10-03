@@ -2,6 +2,7 @@ import streamlit as st
 import whisper
 from transformers import pipeline
 import subprocess
+import ffmpeg
 
 # Increase the maximum upload size to 500MB
 #st.set_option('server.maxUploadSize', 500)
