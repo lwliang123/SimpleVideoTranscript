@@ -4,7 +4,7 @@ from transformers import pipeline
 import subprocess
 
 # Increase the maximum upload size to 500MB
-st.set_option('server.maxUploadSize', 500)
+#st.set_option('server.maxUploadSize', 500)
 
 st.title("Lecture Transcription and Summarization")
 
