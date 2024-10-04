@@ -2,7 +2,6 @@ import streamlit as st
 import whisper
 from transformers import pipeline
 import subprocess
-import ffmpeg
 
 # Increase the maximum upload size to 500MB
 #st.set_option('server.maxUploadSize', 500)
@@ -21,7 +20,7 @@ if uploaded_file is not None:
 
     st.info("Transcribing audio...")
     # Transcribe audio
-    model = whisper.load_model("base")
+    model = whisper.load_model("small")
     result = model.transcribe("output_audio.wav")
     transcription = result["text"]
     st.subheader("Transcription")
