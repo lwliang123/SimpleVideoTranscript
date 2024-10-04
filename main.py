@@ -46,7 +46,7 @@ if uploaded_file is not None:
         with st.spinner("Transcribing audio..."):
             # Load Whisper model and transcribe audio
             model = whisper.load_model("small")
-            transcription_result = model.transcribe(output_audio_path)
+            transcription_result = model.transcribe(output_audio_path, language='en')
             transcription = transcription_result["text"]
 
             st.subheader("Transcription")
